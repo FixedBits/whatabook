@@ -1,5 +1,5 @@
 # whatabook
-## Repository for WEB-335 WhatABook project
+Repository for WEB-335 WhatABook project
 
 ## Contributors
 
