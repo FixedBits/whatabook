@@ -3,6 +3,6 @@ Repository for WEB-335 WhatABook project
 
 ## Contributors
 
-- Phuong Tran
 - Victor Soto
+- Phuong Tran
 - Mackenzie Lubben-Ortiz
