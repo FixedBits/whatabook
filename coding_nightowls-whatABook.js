@@ -183,10 +183,10 @@ rachel = {
       author: "Ray Bradbury",
     },
     {
-      bookId: "ISBN 9781503290563",
-      genre: "Romance",
-      title: "Pride & Prejudice ",
-      author: "Jane Austen",
+       bookId: "ISBN 9780063214835",
+       genre: "Horror",
+       title: "The Black Phone",
+       author: "Joe Hill",
     }
   ]
 };
