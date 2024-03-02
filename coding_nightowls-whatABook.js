@@ -54,18 +54,21 @@ db.createCollection("customers", {
         }, 
         wishlist: {
           bsonType: "array",
-          properties: {
-            bookId: {
-              bsonType: "string",
-            },
-            genre: {
-              bsonType: "string",
-            },
-            title: {
-              bsonType: "string",
-            },
-            author: {
-              bsonType: "string",
+          items: {
+            bsonType: "object",
+            properties: {
+              bookId: {
+                bsonType: "string",
+              },
+              genre: {
+                bsonType: "string",
+              },
+              title: {
+                bsonType: "string",
+              },
+              author: {
+                bsonType: "string",
+              },
             },
           },
         },
