@@ -1,5 +1,5 @@
 /**
- Title: TheCodingNightOwls-queries.js
+ Title: theCodingNightOwlsQueries.js
  Authors: Victor, Phuong & Mackenzie
  Date: 02 March 2024
  Description: Queries for WhatABook project
