@@ -1,5 +1,5 @@
 /** 
-  Title: coding_nightowls-whatABook.js
+  Title: codingNightowlsWhatABook.js
   Authors: Victor, Phuong & Mackenzie
   Date: 03/02/2024
   Description: Script & queries for WhatABook project
