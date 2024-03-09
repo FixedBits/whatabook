@@ -67,3 +67,12 @@ db.customers.insertOne({customerId: "c1007"}, {wishlist: {bookId: "ISBN 97800605
 
 // remove the book from a customer's wishlist
 db.customer.deleteOne({_id: ObjectId('65e3d526a12a45f177f5a2b7')})
+
+//query to display a wishlist by customerId
+db.customers.find({ customerId: "c1005" }, { wishlist: 1 })
+
+//add book to customers wishlistItems
+db.customers.updateOne({ customerId: "c1005" }, { $push: { "wishlist": { bookId: "ISBN 978250268129", genre: "Humor", title: "The Panic Years", author: "Nell Frizzell"},},});
+
+//remove a book from a customer's wishlist
+db.customers.updateOne({ customerId: "c1005" }, { $pull: { "wishlist": { bookId: "ISBN 978250268129", genre: "Humor", title: "The Panic Years", author: "Nell Frizzell"},},});
