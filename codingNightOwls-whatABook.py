@@ -1,5 +1,5 @@
 """ 
-Title: tran-whatABook.py
+Title: codingNightOwls-whatABook.py
 Author: Phuong, Vix and Mackenize
 Date: 03/09/2024
 Description: Python for WhatABook app
