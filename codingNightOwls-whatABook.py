@@ -39,7 +39,7 @@ select = input ('To view wishlist, please enter your customer ID. ')
 # Add a blank line to improve readability.
 print()
 
-if select == 'c1005' or select == 'c1008' or select == 'c1009':
+if select == 'c1005' or select == 'c1008' or select == 'c1009' or select == 'c1006' or select == 'c1007':
     for wishlist in db.customers.find({'customerId': select}, {'wishlist': 1}):
         print(wishlist)
 else:
