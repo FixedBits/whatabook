@@ -11,24 +11,12 @@
 db.books.find()
 
 // display a list of books based on genre 
-
-// Romance
-db.books.find({genre: {$all: ["Romance"]}})
-
-// Fantasy
-db.books.find({genre: {$all: ["Fantasy"]}})
-
-// Fiction
-db.books.find({genre: {$all: ["Fiction"]}})
-
-// Horror
-db.books.find({genre: {$all: ["Horror"]}})
-
-// Thriller
-db.books.find({genre: {$all: ["Thriller"]}})
-
-// TrueCrime
-db.books.find({genre: {$all: ["TrueCrime"]}})
+db.books.find({genre: "Romance"})
+db.books.find({genre: "Fantasy"})
+db.books.find({genre: "Fiction"})
+db.books.find({genre: "Horror"})
+db.books.find({genre: "Thriller"})
+db.books.find({genre: "TrueCrime"})
 
 // display a list of books by author
 db.books.find({author: "Jane Austen"})
@@ -64,10 +52,11 @@ db.customers.findOne({customerId: "c1008"}, {wishlist: 1})
 db.customers.findOne({customerId: "c1009"}, {wishlist: 1})
 
 // add a book to a customer's wishlist
-db.customers.insertOne({customerId: "c1007"}, {wishlist: {bookId: "ISBN 9780060598242", genre: "Fantasy", title: "The Chronicles of Narnia", author: "C.S. Lewis"}})
+db.customers.updateOne({customerId: "c1007"}, {$push: {wishlist: {bookId: "ISBN 9780060598242", genre: "Fantasy", title: "The Chronicles of Narnia", author: "C.S. Lewis"}}})
 
 // remove the book from a customer's wishlist
-db.customer.deleteOne({_id: ObjectId('65e3d526a12a45f177f5a2b7')})
+// You need to know the bookId of the book you want to remove
+db.customers.updateOne({customerId: "c1007"}, {$pull: {wishlist: {bookId: "ISBN 9780060598242"}}})
 
 //query to display a wishlist by customerId
 db.customers.find({ customerId: "c1005" }, { wishlist: 1 })
