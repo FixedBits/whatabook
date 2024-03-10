@@ -1,7 +1,8 @@
 /**
- Title: theCodingNightOwlsQueries.js
+ Title: codingNightOwls-WhatABooksQueries.js
  Authors: Victor, Phuong & Mackenzie
- Date: 02 March 2024
+ Date: 03/02/2024
+ Revised: 03/10/2024
  Description: Queries for WhatABook project
  */
 
