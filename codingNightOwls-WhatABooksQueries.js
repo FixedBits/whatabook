@@ -55,7 +55,6 @@ db.customers.findOne({customerId: "c1009"}, {wishlist: 1})
 db.customers.updateOne({customerId: "c1007"}, {$push: {wishlist: {bookId: "ISBN 9780060598242", genre: "Fantasy", title: "The Chronicles of Narnia", author: "C.S. Lewis"}}})
 
 // remove the book from a customer's wishlist
-// You need to know the bookId of the book you want to remove
 db.customers.updateOne({customerId: "c1007"}, {$pull: {wishlist: {bookId: "ISBN 9780060598242"}}})
 
 //query to display a wishlist by customerId
