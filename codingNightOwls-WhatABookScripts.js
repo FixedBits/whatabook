@@ -3,7 +3,7 @@
   Authors: Victor, Phuong & Mackenzie
   Date: 03/02/2024
   Revised: 03/10/2024
-  Description: Scripts for WhatABook project
+  Description: Scripts and Queries for WhatABook project
 */
 
 // Dropping (deleting) the books, customers and wishlist collections.
@@ -34,11 +34,9 @@ db.createCollection("books", {
       }
     }
   }
-
 });
 
-
-// Creating customers and wishlist collections
+// Create customers and wishlist collections
 db.createCollection("customers", {
   validator: {
     $jsonSchema: {
@@ -78,6 +76,7 @@ db.createCollection("customers", {
   },
 });
 
+// Define the books
 // romance genre books
 romance = {
   bookId: "ISBN 9781503290563",
@@ -168,7 +167,13 @@ true_crime_2 = {
   author: "Ryan Green",
 };
 
-// Adding the data for the customers.
+// Insert books into the books collection
+db.books.insertMany([romance, romance_2, fantasy, fantasy_2, fiction, fiction_2, horror, horror_2, thriller, thriller_2, true_crime, true_crime_2]);
+
+// Verify the insertion
+db.books.find();
+
+// Define the customers
 rachel = {
   customerId: 'c1005',
   firstName: 'Rachel',
@@ -298,3 +303,9 @@ jenny = {
     }
   ]
 };
+
+// Insert customers into the customers collection
+db.customers.insertMany([rachel, david, john, ambrose, jenny]);
+
+// Verify the insertion
+db.customers.find();
